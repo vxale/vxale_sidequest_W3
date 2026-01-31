@@ -21,7 +21,7 @@
 //
 // We store the “name” of the current screen as a string.
 // Only one screen should be active at a time.
-let currentScreen = "start"; // "start" | "instr" | "game" | "win" | "lose"
+let currentScreen = "start"; // "start" | "instr" | "intro" | "stranger" | "ending_safe" | "ending_good" | "ending_bad"
 
 // ------------------------------
 // setup() runs ONCE at the beginning
@@ -44,15 +44,17 @@ function draw() {
   // Each screen file defines its own draw function:
   //   start.js         → drawStart()
   //   instructions.js  → drawInstr()
-  //   game.js          → drawGame()
-  //   win.js           → drawWin()
-  //   lose.js          → drawLose()
+  //   intro.js         → drawIntro()
+  //   stranger.js      → drawStranger()
+  //   ending_*.js      → drawEnding*
 
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "instr") drawInstr();
-  else if (currentScreen === "game") drawGame();
-  else if (currentScreen === "win") drawWin();
-  else if (currentScreen === "lose") drawLose();
+  else if (currentScreen === "intro") drawIntro();
+  else if (currentScreen === "stranger") drawStranger();
+  else if (currentScreen === "ending_safe") drawEndingSafe();
+  else if (currentScreen === "ending_good") drawEndingGood();
+  else if (currentScreen === "ending_bad") drawEndingBad();
 
   // (Optional teaching note)
   // This “if/else chain” is a very common early approach.
@@ -69,17 +71,15 @@ function mousePressed() {
   // Each screen *may* define a mouse handler:
   // start.js         → startMousePressed()
   // instructions.js  → instrMousePressed()
-  // game.js          → gameMousePressed()
-  // win.js           → winMousePressed()
-  // lose.js          → loseMousePressed()
+  // intro.js         → introMousePressed()
+  // stranger.js      → strangerMousePressed()
+  // ending_*.js      → endingMousePressed?.()
 
   if (currentScreen === "start") startMousePressed();
   else if (currentScreen === "instr") instrMousePressed();
-  else if (currentScreen === "game") gameMousePressed();
-  // The ?.() means “call this function only if it exists”
-  // This prevents errors if a screen doesn’t implement a handler.
-  else if (currentScreen === "win") winMousePressed?.();
-  else if (currentScreen === "lose") loseMousePressed?.();
+  else if (currentScreen === "intro") introMousePressed?.();
+  else if (currentScreen === "stranger") strangerMousePressed?.();
+  else if (currentScreen.startsWith("ending_")) endingMousePressed?.();
 }
 
 // ------------------------------
