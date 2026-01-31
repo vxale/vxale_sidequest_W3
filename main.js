@@ -96,9 +96,9 @@ function keyPressed() {
 
   if (currentScreen === "start") startKeyPressed();
   else if (currentScreen === "instr") instrKeyPressed();
-  else if (currentScreen === "game") gameKeyPressed?.();
-  else if (currentScreen === "win") winKeyPressed?.();
-  else if (currentScreen === "lose") loseKeyPressed?.();
+  else if (currentScreen === "intro") introKeyPressed?.();
+  else if (currentScreen === "stranger") strangerKeyPressed?.();
+  else if (currentScreen.startsWith("ending_")) endingKeyPressed?.();
 }
 
 // ------------------------------------------------------------
