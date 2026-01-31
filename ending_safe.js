@@ -1,5 +1,5 @@
-const restartBtn = {
-  x: width / 2,
+let restartBtn = {
+  x: 400,
   y: 600,
   w: 260,
   h: 80,
@@ -7,6 +7,7 @@ const restartBtn = {
 };
 
 function drawEndingSafe() {
+  restartBtn.x = width / 2; // Update x position in case of canvas size change
   background(210, 245, 210);
 
   fill(0);

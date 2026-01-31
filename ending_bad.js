@@ -1,12 +1,5 @@
-const restartBtn = {
-  x: width / 2,
-  y: 600,
-  w: 260,
-  h: 80,
-  label: "RESTART",
-};
-
 function drawEndingBad() {
+  restartBtn.x = width / 2; // Update x position in case of canvas size change
   background(255, 220, 220);
 
   fill(0);
