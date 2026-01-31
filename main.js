@@ -28,10 +28,11 @@ let currentScreen = "start"; // "start" | "instr" | "intro" | "stranger" | "endi
 // ------------------------------
 // This is where you usually set canvas size and initial settings.
 function setup() {
-  createCanvas(800, 800);
+  const cnv = createCanvas(800, 800);
 
-  // Sets a default font for all text() calls
-  // (This can be changed later per-screen if you want.)
+  // Mount the canvas inside the intended HTML container
+  cnv.parent(document.querySelector(".canvas-frame"));
+
   textFont("sans-serif");
 }
 
