@@ -1,28 +1,22 @@
 ## Project Title
 
-GBDA302 Week 3 Example 1: Instructions Screen with Back button
-
----
-
-## Authors
-
-Karen Cochrane and David Han
+Side Quest Week 3: Long Way Home at Midnight - An Interactive Game
 
 ---
 
 ## Description
 
-This p5.js project demonstrates a simple multi-screen game structure using a state-based approach. The example includes a start screen, an instructions screen with a back button, a basic game screen, and win/lose outcome screens. The focus is on showing how to separate screens into different files, route input based on the current game state, and design simple UI elements such as buttons and keyboard controls.
+Long Way Home at Midnight is a short, choice-driven interactive story built in p5.js using multiple game states. The player navigates a late-night commute by clicking buttons or using keyboard shortcuts to make decisions that branch the story into three different endings. The project is inspired by everyday moral situations in urban life and explores how small choices can lead to different consequences.
 
 ---
 
-## Learning Goals
+## Interaction Instructions
 
-- Understand how to manage multiple game states using a shared currentScreen variable
-- Practice separating code across multiple files for readability and maintenance
-- Implement clickable and keyboard-accessible UI buttons
-- Learn how to route draw(), mousePressed(), and keyPressed() logic based on the active screen
-- Build a basic instructions screen with a functional back button
+> Start the project by clicking Start Story on the title screen or pressing Enter.
+> Make choices by clicking on on-screen buttons or using the indicated keyboard keys (for example T / W or H / I).
+> Watch for visual feedback such as buttons changing appearance when hovered over, indicating they are clickable.
+> Read the on-screen hints for available controls at each scene.
+> When an ending is reached, restart the story by clicking Restart or pressing the Spacebar.
 
 ---
 
@@ -32,8 +26,8 @@ N/A
 
 ---
 
-## GenAI
+## References
 
-The code was written by Dr. Karen Cochrane but she used GenAI to write the comments.
+N/A
 
 ---
