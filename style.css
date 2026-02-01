@@ -68,7 +68,7 @@ main {
 ------------------------------ */
 .canvas-frame {
   width: 100%;
-  min-height: 800px; /* IMPORTANT: ensures space for canvas */
+  min-height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;

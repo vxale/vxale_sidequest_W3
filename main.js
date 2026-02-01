@@ -28,12 +28,22 @@ let currentScreen = "start"; // "start" | "instr" | "intro" | "stranger" | "endi
 // ------------------------------
 // This is where you usually set canvas size and initial settings.
 function setup() {
-  const cnv = createCanvas(800, 800);
-
   // Mount the canvas inside the intended HTML container
-  cnv.parent(document.querySelector(".canvas-frame"));
+  const frame = document.querySelector(".canvas-frame");
+  const size = frame.clientWidth;
+
+  const cnv = createCanvas(size, size);
+  cnv.parent(frame);
 
   textFont("sans-serif");
+}
+// ------------------------------
+// Make the canvas responsive to window resizing
+// ------------------------------
+function windowResized() {
+  const frame = document.querySelector(".canvas-frame");
+  const size = frame.clientWidth;
+  resizeCanvas(size, size);
 }
 
 // ------------------------------
