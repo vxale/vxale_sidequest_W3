@@ -24,7 +24,11 @@ function drawEndingGood() {
   cursor(isHover(restartBtn) ? HAND : ARROW);
 
   textSize(18);
-  text("Click or press the SPACEBAR to restart the story.", width / 2, 650);
+  text(
+    "Click or press the SPACEBAR to restart the story.",
+    width / 2,
+    restartBtn.y + restartBtn.h / 2 + 40,
+  );
 }
 
 function endingMousePressed() {
