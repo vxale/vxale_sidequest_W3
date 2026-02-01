@@ -6,6 +6,9 @@ const strangerChoices = {
 function drawStranger() {
   background(225);
 
+  strangerChoices.help.x = width / 2 - 140;
+  strangerChoices.ignore.x = width / 2 + 140;
+
   fill(0);
   textAlign(CENTER, TOP);
   textSize(34);

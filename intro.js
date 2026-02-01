@@ -6,6 +6,9 @@ const introChoices = {
 function drawIntro() {
   background(235);
 
+  introChoices.train.x = width / 2 - 140;
+  introChoices.walk.x = width / 2 + 140;
+
   fill(0);
   textAlign(CENTER, TOP);
   textSize(36);
